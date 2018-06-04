@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="por">
+  <head>
+    <title>Terminal Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/mystyle.css">
+
+  </head>
+  <body>
+        <nav class="navbar navbar-expand navbar-dark" id="navegation-bar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link navbar-brand" href="/">
+                            CODE Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Status Geral</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Del. Serviço</a>
+                    </li>
+                </ul>
+            </nav>
+      <div id="app_table">
+            <div class="mymain">
+                <div class="container">
+                    <h3 class="text-center">Cadastro de Serviços</h3>
+                    <div class="input-group">    
+                        <div class="input-group-prepend">
+                            <button v-on:click="insertService" class="btn btn-outline-secondary" type="button">Inserir</button>
+                        </div>
+                      
+                        <input type="text" name="name" class="form-control" placeholder="Nome: Ex.. Code Service X">
+                        <input type="text" name="reference" class="form-control" placeholder="Referência a máquina: Ex.. 192.168.1.45\services">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container app_table_services" >
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Rerefência</th>
+                    </thead>
+                    <tbody >
+                        <tr v-for="(serv, index) in services" >
+                                <td>{{ index }}</td>
+                                <td>{{ serv.name }}</td>
+                                <td>{{ serv.ref }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </div>      
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="static/js/mycore.js"></script>
+    
+  </body>
+</html>
