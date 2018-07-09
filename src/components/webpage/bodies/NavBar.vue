@@ -21,6 +21,7 @@
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
+          <b-nav-item>Junte-se!</b-nav-item>
           <b-nav-item>Sobre</b-nav-item>  
         </b-navbar-nav>
         
